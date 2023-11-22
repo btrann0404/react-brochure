@@ -35,9 +35,12 @@ export default function App(){
         <button type="submit">Submit</button>
       </form>
       <div>
-        <ul>
-          {data ? data.map((place, index) => (<li key={index}>{place}</li>)) : ""}
-        </ul>
+        {data ? 
+        <>
+          <ul>{data.map((place, index) => (<li key={index}>{place}</li>))}</ul> 
+          <h2>add weather information</h2>
+        </> 
+        : ""}
       </div>
     </>
   )
